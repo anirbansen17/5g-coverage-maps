@@ -41,7 +41,8 @@ button {
   margin: 20px 10px;
   border-radius: 25px;
   font-weight: bold;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: 20px;
   border: 2px solid #009688;
   background: transparent;
@@ -73,4 +74,48 @@ button:hover span {
 
 button:hover .buttontext {
   color: gold;
+}
+
+:root {
+  --dark-color: #635bff;
+  --light-color: #80e9ff;
+}
+
+svg {
+  cursor: pointer;
+  position: absolute;
+  top: 205px;
+  left: 850px;
+}
+
+#darkGroup {
+  fill: var(--dark-color);
+}
+#lightGroup {
+  fill: var(--light-color);
+}
+#dark1,
+#light1,
+#dark2 {
+  transition: all 1s ease;
+}
+#dark2 {
+  transform: translateX(-100%);
+}
+svg:hover #light1 {
+  transform: translateX(20%);
+}
+svg:hover #dark1 {
+  transform: translateX(40%);
+  opacity: 0;
+}
+svg:hover #dark2 {
+  transform: translateX(0%);
+}
+.gif {
+  height: 50px;
+  width: auto;
+  position: absolute;
+  top: 248px;
+  left: 1024px;
 }
